@@ -1,19 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package com.mycompany.johngalarzalaboratorio1practicacreaciondeclases;
 
-/**
- *
- * @author ESPE
- */
 public class JohnGalarzaLaboratorio1PracticaCreaciondeClases {
-    
-    /**
-    *
-    */
+
     public static void main(String[] args) {
         
         //Dando valores a Auto 1
@@ -64,47 +52,47 @@ public class JohnGalarzaLaboratorio1PracticaCreaciondeClases {
         celular2.Precio=10;
         celular2.Modelo="1100";
         
-        //Imprimir
+        //Imprime en la pantalla
         System.out.println("Auto 1: ");
-        System.out.println(auto1.Año);
-        System.out.println(auto1.Color);
-        System.out.println(auto1.Diseño);
-        System.out.println(auto1.Marca);
-        System.out.println(auto1.Placa);
+        System.out.println("Año: "+auto1.Año);
+        System.out.println("Color: "+auto1.Color);
+        System.out.println("Diseño: "+auto1.Diseño);
+        System.out.println("Marca: "+auto1.Marca);
+        System.out.println("Placa: "+auto1.Placa);
         System.out.println("");
         System.out.println("Auto 2:");
-        System.out.println(auto2.Año);
-        System.out.println(auto2.Color);
-        System.out.println(auto2.Diseño);
-        System.out.println(auto2.Marca);
-        System.out.println(auto2.Placa);
+        System.out.println("Año: "+auto2.Año);
+        System.out.println("Color: "+auto2.Color);
+        System.out.println("Diseño: "+auto2.Diseño);
+        System.out.println("Marca: "+auto2.Marca);
+        System.out.println(" Placa: "+auto2.Placa);
         System.out.println("");
         System.out.println("Persona 1:");
-        System.out.println(persona1.Edad);
-        System.out.println(persona1.Etnia);
-        System.out.println(persona1.Genero);
-        System.out.println(persona1.Nacionalidad);
-        System.out.println(persona1.Nombre);
+        System.out.println("Edad: "+persona1.Edad);
+        System.out.println("Etnia: "+persona1.Etnia);
+        System.out.println("Genero: "+persona1.Genero);
+        System.out.println("Nacionalidad: "+persona1.Nacionalidad);
+        System.out.println("Nombre: "+persona1.Nombre);
         System.out.println("");
         System.out.println("Persona 2:");
-        System.out.println(persona2.Edad);
-        System.out.println(persona2.Etnia);
-        System.out.println(persona2.Genero);
-        System.out.println(persona2.Nacionalidad);
-        System.out.println(persona2.Nombre);
+        System.out.println("Edad: "+persona2.Edad);
+        System.out.println("Etnia: "+persona2.Etnia);
+        System.out.println("Genero: "+persona2.Genero);
+        System.out.println("Nacionalidad: "+persona2.Nacionalidad);
+        System.out.println("Nombre: "+persona2.Nombre);
         System.out.println("");
         System.out.println("Celular 1:");
-        System.out.println(celular1.Color);
-        System.out.println(celular1.Marca);
-        System.out.println(celular1.Memoria);
-        System.out.println(celular1.Modelo);
-        System.out.println(celular1.Precio);
+        System.out.println("Color: "+celular1.Color);
+        System.out.println("Marca: "+celular1.Marca);
+        System.out.println("Memoria: "+celular1.Memoria);
+        System.out.println("Modelo: "+celular1.Modelo);
+        System.out.println("Precio: "+celular1.Precio);
         System.out.println("");
         System.out.println("Celular 2:");
-        System.out.println(celular2.Color);
-        System.out.println(celular2.Marca);
-        System.out.println(celular2.Memoria);
-        System.out.println(celular2.Modelo);
-        System.out.println(celular2.Precio);
+        System.out.println("Color: "+celular2.Color);
+        System.out.println("Marca: "+celular2.Marca);
+        System.out.println("Memoria: "+celular2.Memoria);
+        System.out.println("Modelo: "+celular2.Modelo);
+        System.out.println("Precio: "+celular2.Precio);
     }
 }

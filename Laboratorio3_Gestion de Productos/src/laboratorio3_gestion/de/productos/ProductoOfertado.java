@@ -10,7 +10,7 @@ public class ProductoOfertado extends Productos{
         super(nombre, precio);
         this.dias = dias;
     }
-    
+ 
     //Sobreescritura del metodo obtenerPrecio que modifica
     //con un descuento del 20% si los dias son iguales a 1
     //con 15% si los dias son 2 o 3

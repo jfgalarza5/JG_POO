@@ -9,14 +9,29 @@ package principal;
  * @author johng
  */
 public class Menu extends javax.swing.JFrame {
-
+    Form_estu estudiante=new Form_estu();
+    Form_prof profesor=new Form_prof();
+    Horario horario = new Horario();
     /**
      * Creates new form Menu
      */
     public Menu() {
         initComponents();
+        ingresar();
     }
-
+    
+    public void ingresar(){
+        menuBar.setVisible(false);
+        Login log = new Login();
+        Escritorio.setSize(log.getSize());
+        log.setSize(280,283);
+        log.setLocation(0,0);
+        System.out.println(log.getSize());
+        Escritorio.add(log);
+        
+        Escritorio.revalidate();
+        Escritorio.repaint();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -28,31 +43,13 @@ public class Menu extends javax.swing.JFrame {
 
         Escritorio = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
-        fileMenu = new javax.swing.JMenu();
-        exitMenuItem = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
         editMenu1 = new javax.swing.JMenu();
         editMenu2 = new javax.swing.JMenu();
-        helpMenu = new javax.swing.JMenu();
-        contentMenuItem = new javax.swing.JMenuItem();
-        aboutMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        fileMenu.setMnemonic('f');
-        fileMenu.setText("File");
-
-        exitMenuItem.setMnemonic('x');
-        exitMenuItem.setText("Exit");
-        exitMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitMenuItemActionPerformed(evt);
-            }
-        });
-        fileMenu.add(exitMenuItem);
-
-        menuBar.add(fileMenu);
-
+        editMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono/Estudiante.png"))); // NOI18N
         editMenu.setMnemonic('e');
         editMenu.setText("Estudiante");
         editMenu.addMenuListener(new javax.swing.event.MenuListener() {
@@ -71,6 +68,7 @@ public class Menu extends javax.swing.JFrame {
         });
         menuBar.add(editMenu);
 
+        editMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono/Profesor.png"))); // NOI18N
         editMenu1.setMnemonic('e');
         editMenu1.setText("Profesor");
         editMenu1.addMenuListener(new javax.swing.event.MenuListener() {
@@ -89,6 +87,7 @@ public class Menu extends javax.swing.JFrame {
         });
         menuBar.add(editMenu1);
 
+        editMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icono/Horario.png"))); // NOI18N
         editMenu2.setMnemonic('e');
         editMenu2.setText("Horario");
         editMenu2.addMenuListener(new javax.swing.event.MenuListener() {
@@ -107,19 +106,6 @@ public class Menu extends javax.swing.JFrame {
         });
         menuBar.add(editMenu2);
 
-        helpMenu.setMnemonic('h');
-        helpMenu.setText("Help");
-
-        contentMenuItem.setMnemonic('c');
-        contentMenuItem.setText("Contents");
-        helpMenu.add(contentMenuItem);
-
-        aboutMenuItem.setMnemonic('a');
-        aboutMenuItem.setText("About");
-        helpMenu.add(aboutMenuItem);
-
-        menuBar.add(helpMenu);
-
         setJMenuBar(menuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -130,16 +116,12 @@ public class Menu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Escritorio, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+            .addComponent(Escritorio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void exitMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuItemActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_exitMenuItemActionPerformed
-
+    
     private void editMenuMenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_editMenuMenuSelected
         
     }//GEN-LAST:event_editMenuMenuSelected
@@ -149,17 +131,20 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_editMenu1MenuSelected
 
     private void editMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editMenuMouseClicked
-        Form_estu form1=new Form_estu();
-        Escritorio.add(form1);
-        form1.toFront();
-        form1.setVisible(true);
+        Escritorio.removeAll();
+        Escritorio.repaint();
+        Escritorio.add(estudiante);
+        estudiante.toFront();
+        estudiante.setVisible(true);
+        
     }//GEN-LAST:event_editMenuMouseClicked
 
     private void editMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editMenu1MouseClicked
-        Form_prof form1=new Form_prof();
-        Escritorio.add(form1);
-        form1.toFront();
-        form1.setVisible(true);
+        Escritorio.removeAll();
+        Escritorio.repaint();
+        Escritorio.add(profesor);
+        profesor.toFront();
+        profesor.setVisible(true);
     }//GEN-LAST:event_editMenu1MouseClicked
 
     private void editMenu2MenuSelected(javax.swing.event.MenuEvent evt) {//GEN-FIRST:event_editMenu2MenuSelected
@@ -167,7 +152,8 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_editMenu2MenuSelected
 
     private void editMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editMenu2MouseClicked
-        Horario horario = new Horario();
+        Escritorio.removeAll();
+        Escritorio.repaint();
         Escritorio.add(horario);
         horario.toFront();
         horario.setVisible(true);
@@ -209,16 +195,11 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane Escritorio;
-    private javax.swing.JMenuItem aboutMenuItem;
-    private javax.swing.JMenuItem contentMenuItem;
+    public static javax.swing.JDesktopPane Escritorio;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenu editMenu1;
     private javax.swing.JMenu editMenu2;
-    private javax.swing.JMenuItem exitMenuItem;
-    private javax.swing.JMenu fileMenu;
-    private javax.swing.JMenu helpMenu;
-    private javax.swing.JMenuBar menuBar;
+    public static javax.swing.JMenuBar menuBar;
     // End of variables declaration//GEN-END:variables
 
 }
